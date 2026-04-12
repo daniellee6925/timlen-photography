@@ -91,9 +91,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="font-[family-name:var(--font-cormorant)] text-2xl tracking-[0.15em] text-[#111111] mb-4 font-light">
               William Timlen Photography
             </p>
-            <p className="text-sm text-gray-400 mb-6">
+            <p className="text-sm text-gray-400 mb-2">
               {site.address.addressLocality}, {site.address.addressRegion} | {site.phone} | {site.email}
             </p>
+            <ul className="flex justify-center gap-6 text-xs tracking-[0.15em] uppercase text-gray-400 mb-6">
+              {[
+                { href: "https://instagram.com/williamtimlen", label: "Instagram" },
+                { href: "https://pinterest.com/timlenphoto26", label: "Pinterest" },
+                { href: "https://x.com/BillTimeln26", label: "Twitter / X" },
+              ].map((social) => (
+                <li key={social.href}>
+                  <a href={social.href} target="_blank" rel="noopener noreferrer" className="hover:text-[#111111] transition-colors hover-fade">
+                    {social.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <ul className="flex justify-center gap-8 text-xs tracking-[0.15em] uppercase text-gray-400 mb-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
