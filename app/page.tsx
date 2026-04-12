@@ -51,7 +51,7 @@ export default function Home() {
             title: "Corporate",
             desc: "Elevate your professional image with polished headshots by Bill Timlen. William Timlen works with executives, creatives, and teams across New York City.",
             align: "left" as const,
-            image: "/photos/head1.jpg",
+            image: "/photos/corporate.jpg",
           },
         ].map((category) => (
           <div key={category.title} className="portfolio-block">
