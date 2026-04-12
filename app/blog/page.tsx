@@ -11,6 +11,27 @@ export const metadata = generatePageMetadata({
 
 const posts = [
   {
+    slug: "spring-portrait-sessions-in-new-york",
+    title: "Spring Portrait Sessions in New York — William Timlen",
+    excerpt:
+      "William Timlen shares his favorite spring portrait locations across New York and New Jersey, from cherry blossoms at the Brooklyn Botanic Garden to golden hour at Liberty State Park.",
+    date: "April 3, 2026",
+  },
+  {
+    slug: "the-art-of-natural-light-portrait-photography",
+    title: "The Art of Natural Light Portrait Photography — Bill Timlen",
+    excerpt:
+      "Bill Timlen explores how natural light shapes portrait photography and shares his techniques for finding beautiful light — from window light and open shade to golden hour.",
+    date: "March 21, 2026",
+  },
+  {
+    slug: "how-to-prepare-for-your-wedding-day-photography",
+    title: "How to Prepare for Your Wedding Day Photography — William Timlen",
+    excerpt:
+      "William Timlen shares practical advice for couples on building a realistic timeline, creating a shot list, and making the most of your wedding day photography coverage.",
+    date: "March 8, 2026",
+  },
+  {
     slug: "tips-for-your-engagement-shoot",
     title: "Tips for Your Engagement Shoot — By William Timlen",
     excerpt:
