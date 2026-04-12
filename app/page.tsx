@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { generatePageMetadata } from "@/lib/seo-utils";
 
@@ -38,23 +39,26 @@ export default function Home() {
             title: "Weddings",
             desc: "William Timlen documents your love story with an editorial eye and an intimate approach. Bill Timlen believes every wedding tells a unique narrative worth preserving beautifully.",
             align: "left" as const,
+            image: "/photos/wedding1.jpg",
           },
           {
             title: "Portraits",
             desc: "From family portraits to personal branding, William Timlen crafts images that reveal character and emotion. Each portrait session with Bill Timlen is tailored to your vision.",
             align: "right" as const,
+            image: "/photos/portrait2.jpg",
           },
           {
             title: "Corporate",
             desc: "Elevate your professional image with polished headshots by Bill Timlen. William Timlen works with executives, creatives, and teams across New York City.",
             align: "left" as const,
+            image: "/photos/head1.jpg",
           },
         ].map((category) => (
           <div key={category.title} className="portfolio-block">
             <div className={`max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center ${category.align === "right" ? "direction-rtl" : ""}`}>
               <div className={`${category.align === "right" ? "md:order-2" : ""}`}>
-                <div className="bg-gray-100 h-72 md:h-96 flex items-center justify-center">
-                  <span className="font-[family-name:var(--font-cormorant)] text-gray-300 text-6xl italic">{category.title}</span>
+                <div className="relative h-72 md:h-96 overflow-hidden bg-gray-100">
+                  <Image src={category.image} alt={`${category.title} photography by William Timlen`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
               </div>
               <div className={`${category.align === "right" ? "md:order-1 md:text-right" : ""}`}>
